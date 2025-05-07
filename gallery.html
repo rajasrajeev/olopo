@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olopo Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/gallery.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #130800;">
+      <div class="container-fluid">
+        <!-- Mobile Top Row: Hamburger + Logo -->
+        <div class="d-flex align-items-center w-100">
+          <!-- Toggle Button for mobile - moved to left -->
+          <button class="navbar-toggler border-0 p-0 me-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Logo -->
+          <a class="navbar-brand logo" href="/">
+            <img class="navbar-sm-img" src="assets/images/header/header.png" alt="9Kopo" />
+          </a>
+        </div>
+
+        <!-- Mobile Input Fields (always visible) -->
+        <div class="d-flex flex-column w-100 mt-2 d-block d-md-none">
+          <div class="input-container d-flex align-items-center border-bottom border-secondary mb-2">
+            <i class="bi bi-search me-2 text-white"></i>
+            <input type="text" class="form-control bg-transparent border-0 text-white" placeholder="Search..." />
+          </div>
+
+
+        </div>
+
+        <!-- Collapsible Content - Only contains Download button on mobile -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="d-none d-md-flex d-sm-none input-container d-flex align-items-center border-bottom border-secondary mb-2">
+            <i class="bi bi-search me-2 text-white"></i>
+            <input type="text" class="form-control bg-transparent border-0 text-white" placeholder="Search..." />
+            <i class="bi bi-chevron-right ms-2 text-white"></i>
+          </div>
+          <div class="input-container d-flex align-items-center border-bottom border-secondary mb-2">
+            <i class="bi bi-geo-alt-fill me-2 text-white"></i>
+            <input type="text" class="form-control bg-transparent border-0 text-white" placeholder="Select your city" />
+            <i class="bi bi-chevron-right ms-2 text-white"></i>
+          </div>
+
+          <div class="input-container d-flex align-items-center border-bottom border-secondary">
+            <i class="bi bi-translate me-2 text-white"></i>
+            <input type="text" class="form-control bg-transparent border-0 text-white" placeholder="Select language" />
+            <i class="bi bi-chevron-right ms-2 text-white"></i>
+          </div>
+          <!-- Download Button - Inside collapsible menu -->
+          <div class="text-center w-100 mt-2">
+            <button class="download-btn btn p-0 border-0 bg-transparent">
+              <img src="assets/images/downloadButton/download_button.png" alt="Download" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+    <section class="gallery-section">
+      <div class="d-flex justify-content-between">
+        <div class="">
+          <h1 class="mt-4">Gallery</h1>
+        </div>
+        <!-- <div class="coin-badge d-flex align-items-center">
+          <span>2000</span>
+          <i class="bi bi-award-fill ms-1 text-warning"></i>
+        </div> -->
+      </div>
+    
+      <!-- Gallery Grid -->
+      <div class="container py-4">
+        <div class="row g-3">
+          <!-- gallery 1 -->
+          <div class="col-md-3">
+            <div class="card gallery-card">
+              <img src="assets/images/events/first-section.png" alt="gallery 1" />
+              <div class="p-2">
+                <h6 class="mb-1">Title</h6>
+              </div>
+            </div>
+          </div>
+    
+          <!-- gallery 2 -->
+          <div class="col-md-3">
+            <div class="card gallery-card">
+              <img src="assets/images/events/first-section.png" alt="gallery 2" />
+              <div class="p-2">
+                <h6 class="mb-1">L2: Title</h6>
+              </div>
+            </div>
+          </div>
+    
+          <!-- gallery 3 -->
+          <div class="col-md-3">
+            <div class="card  gallery-card">
+              <img src="assets/images/events/first-section.png" alt="gallery 3" />
+              <div class="p-2">
+                <h6 class="mb-1">Title</h6>
+              </div>
+            </div>
+          </div>
+          <!-- galley 4 -->
+          <div class="col-md-3">
+            <div class="card  gallery-card">
+              <img src="assets/images/movie/poster2.webp" alt="gallery 4" />
+              <div class="p-2">
+                <h6 class="mb-1">TITLE</h6>
+
+              </div>
+            </div>
+          </div>
+
+      
+        </div>
+      </div>
+          
+    </section>
+
+
+    <footer class="footer">
+      <div class="logo"><img src="assets/images/footer/logo-white.png" /></div>
+      <div class="trusted-by-container">
+        <hr />
+        <span>Trusted By</span>
+        <hr />
+      </div>
+      <div class="trusted-by-img-container">
+        <img class="img-fluid" src="assets/images/footer/trusted-1.jpg" />
+        <img class="img-fluid" src="assets/images/footer/trusted-2.jpg" />
+        <img class="img-fluid" src="assets/images/footer/trusted-3.jpg" />
+        <img class="img-fluid" src="assets/images/footer/trusted-4.jpg" />
+      </div>
+      <h1 class="mt-5">About Us</h1>
+      <div class="about">
+  
+        <p>Olopo is a smart reward ecosystem designed to turn every transaction into a rewarding experience. From local
+          stores to big brands, users earn cashback and points on every purchase—redeemable for shopping, bill payments,
+          ticket bookings, and more. Backed by HDFC for secure transactions, Olopo empowers users with financial freedom,
+          loyalty benefits, and seamless digital shopping. Our goal is to revolutionize everyday spending through a
+          powerful mix of tech, trust, and rewards. With features like scratch cards, referrals, and real-time savings
+          tracking,
+          Olopo is more than an app—it’s your daily companion for smarter spending.</p>
+      </div>
+  
+  
+      <div class="contact-us-container ">
+        <a href="contact-us.html">
+          <h1 style="font-size: 29.38px;">Contact Us</h1>
+        </a>
+        <div class="contact-us">
+          <span>info@olopo.app</span>
+  
+        </div>
+        <div class="contact-us">
+  
+          <span>+91 7736 463 421</span>
+        </div>
+        <div class="contact-us">
+  
+          <span>Syama Dynamics, 6th Floor, Vytila, Eranakulam, Kerala, India</span>
+        </div>
+      </div>
+      <hr />
+      <div class="contact-us-container">
+        <div class="social-icons">
+          © Olopo
+          <a href="trems-condtion.html">Terms of Service</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact-us.html">Contact Us</a>
+        </div>
+  
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/16Xivmd1za/"><img src="assets/images/footer/Social Icons/fb.png" /></a>
+          <a href="https://www.instagram.com/olopoapp?igsh=MTJ5MDY3N3N0Yml2Zw=="><img
+              src="assets/images/footer/Social Icons/insta.png" /></a>
+          <a href="#"><img src="assets/images/footer/Social Icons/whatsapp.png" /></a>
+          <a href="#"><img src="assets/images/footer/Social Icons/linkedin.png" /></a>
+          <a href="#"><img src="assets/images/footer/Social Icons/twitter.png" /></a>
+          <a href="https://youtube.com/@olopo-app?feature=shared"><img
+              src="assets/images/footer/Social Icons/youtube.png" /></a>
+        </div>
+      </div>
+  
+      <hr />
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
