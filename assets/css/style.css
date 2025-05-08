@@ -46,10 +46,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 .mx-6 {
-    margin-right: 4rem !important;
-    margin-left: 4rem !important;
+  margin-right: 4rem !important;
+  margin-left: 4rem !important;
 }
 
 header nav {
@@ -62,7 +61,7 @@ header nav {
     align-items: center; */
 }
 .navbar-sm-img {
-     width: 65%;
+  width: 65%;
 }
 @media (max-width: 416px) {
   .navbar-sm-img {
@@ -682,6 +681,15 @@ header nav {
   margin: 40px 100px;
   font-size: 14px;
 }
+
+@media screen and (max-width: 468px) {
+  .contact-us-container {
+
+      justify-content: center;
+  
+  }
+}
+
 .contact-us-container h1{
   font-size: 29.38px;
   font-weight: 500;
@@ -705,6 +713,14 @@ header nav {
   font-weight: 500;
   
 }
+@media screen and (max-width: 468px) {
+  .social-icons a{
+    font-size: 4px;
+    
+  }
+  
+}
+
 @media (min-width: 768px) {
   .section-buttons button {
     min-width: 200px;

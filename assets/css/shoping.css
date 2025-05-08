@@ -83,16 +83,35 @@ button::after {
     transition: transform 0.3s ease;
 }
 
-.arrow-down {
+/* .arrow {
     display: inline-block;
     width: 0;
     height: 0;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+} */
+
+/* .arrow-down {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid #007bff;
-    margin-left: 5px;
+
+} */
+
+/* .arrow-up {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #007bff;
+} */
+
+.arrow-icon {
+    padding: 5px;
     transition: transform 0.3s ease;
-}
+  }
+  
+  .rotate {
+    transform: rotate(180deg);
+  }
 
 .accordion-button:not(.collapsed) .arrow-down {
     transform: rotate(180deg); /* Rotate arrow upward when expanded */
@@ -105,14 +124,31 @@ button::after {
     background: #fff;
 }
 
-
+.accordion-header-with-line {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .accordion-title {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .title-underline {
+    height: 2px;
+    background-color: #6C6C6C; /* or #ccc if you want it lighter */
+    width: 100%;
+    margin-top: 5px;
+  }
 
 .video-card {
     border: 2px solid #535353;
     border-radius: 29px; /* Rounded corners */
     overflow: hidden;
     background-color: #fff; /* White background for contrast */
-    width: 363px;
+    width: 100%;
+    /* width: 363px; */
     height: 721px;
 }
 
@@ -146,7 +182,7 @@ button::after {
     margin: 0;
     font-size: 30px;
     line-height: 38px;
-    font-weight: 500;
+    font-weight: 600;
     color: #000;
     font-family:'Gilroy Medium', sans-serif;
 }
@@ -171,7 +207,7 @@ button::after {
 
 .image-placeholder {
     position: relative;
-    width: 363px;
+    /* width: 363px; */
     height: 590px;
     padding-top: 6.25%; /* 16:9 Aspect Ratio */
     background-color: #4a4a4a; /* Gray background */
