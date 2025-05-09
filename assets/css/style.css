@@ -714,15 +714,35 @@ header nav {
   
 }
 @media screen and (max-width: 468px) {
+  .social-icons{
+    display: block;
+    gap: 0px;
+    margin-top: 20px;
+  }
   .social-icons a{
-    font-size: 4px;
+    font-size: 16px;
     
   }
+  .info-button img {
+    width: 300px;
+  }
   
+}
+@media screen and (max-width: 1375px) and (min-width: 1010px) {
+  .info-button img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+  .info-button img {
+    width: 215px;
+  }
 }
 
 @media (min-width: 768px) {
   .section-buttons button {
     min-width: 200px;
   }
+  
 }
