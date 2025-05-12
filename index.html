@@ -63,9 +63,9 @@
           </div>
           <!-- Download Button - Inside collapsible menu -->
           <div class="text-center w-100 mt-2">
-            <button class="download-btn btn p-0 border-0 bg-transparent">
+            <a href="https://mpos-dev.olopo.app/qr" target="_blank" class="download-btn btn p-0 border-0 bg-transparent">
               <img src="assets/images/downloadButton/download_button.png" alt="Download" />
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -86,10 +86,13 @@
       <!--  Carousel images -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/images/banner/olopo-website-banner.png" class="d-block w-100" alt="Olopo Banner">
+          <img src="assets/images/banner/banner-1.jpg" class="d-block w-100" alt="Olopo Banner">
         </div>
         <div class="carousel-item ">
-          <img src="assets/images/banner/olopo-website-banner.png" class="d-block w-100" alt="Olopo Banner">
+          <img src="assets/images/banner/banner-2.jpg" class="d-block w-100" alt="Olopo Banner">
+        </div>
+        <div class="carousel-item ">
+          <img src="assets/images/banner/banner-3.jpg" class="d-block w-100" alt="Olopo Banner">
         </div>
       </div>
 
@@ -338,17 +341,18 @@
     </div>
   </section>
   <div class="modal fade popup-modal" id="popupAdModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-btn" data-bs-dismiss="modal">&times;</div>
-        <div class="modal-body">
-          <i class="bi bi-play-circle"></i>
-          <i class="bi bi-image"></i>
-          <p>Pop-up Ad</p>
-        </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-btn" data-bs-dismiss="modal">&times;</div>
+      <div class="modal-body">
+        <video controls width="100%">
+          <source src="https://olopo.rajasrajeev.com/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>
+</div>
 
 
   <footer class="footer">
