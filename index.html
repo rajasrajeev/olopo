@@ -80,6 +80,8 @@
           aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#olopoCarousel" data-bs-slide-to="1" class="active" aria-current="true"
           aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#olopoCarousel" data-bs-slide-to="2" class="active" aria-current="true"
+          aria-label="Slide 3"></button>
         <!-- Add more buttons as needed -->
       </div>
 
@@ -340,12 +342,12 @@
       <img src="assets/images/brands/view more.png" alt="View more">
     </div>
   </section>
-  <div class="modal fade popup-modal" id="popupAdModal" tabindex="-1" aria-hidden="true">
+ <div class="modal fade popup-modal" id="popupAdModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="close-btn" data-bs-dismiss="modal">&times;</div>
       <div class="modal-body">
-        <video controls width="100%">
+        <video id="modalVideo" controls width="100%">
           <source src="https://olopo.rajasrajeev.com/video.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -429,6 +431,14 @@
       document.addEventListener('DOMContentLoaded', function () {
         var popupModal = new bootstrap.Modal(document.getElementById('popupAdModal'));
         popupModal.show();
+      });
+       // Add this JavaScript code to stop video when modal is closed
+      document.getElementById('popupAdModal').addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('modalVideo');
+        if (video) {
+          video.pause();
+          video.currentTime = 0; // Optional: rewind to beginning
+        }
       });
     </script>
 </body>
