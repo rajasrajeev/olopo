@@ -413,10 +413,6 @@ function showProductDetails(product) {
                             <p><strong>Currency:</strong> ${product.currency.code} (${product.currency.symbol})</p>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Buy Now</button>
-                    </div>
                 </div>
             </div>
         </div>
