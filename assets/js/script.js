@@ -236,7 +236,7 @@ async function fetchCategoriesAndProducts() {
         }
         
         // Find the API SANDBOX B2B category ID
-        const apiSandboxCategory = apiConfig.gifts.categoryData.find(category => category.name === 'API SANDBOX B2B');
+        const apiSandboxCategory = apiConfig.gifts.categoryData[0];
         
         if (!apiSandboxCategory) {
             throw new Error('API SANDBOX B2B category not found');
