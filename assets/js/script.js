@@ -350,9 +350,6 @@ function createProductCard(product) {
     card.innerHTML = `
         <div class="image-wrapper">
             <img src="${imageUrl}" alt="${product.name}">
-            <div class="overlay">
-                <div class="discount">${discountPercent}% <span>Off</span></div>
-            </div>
         </div>
         <div class="brand-info">
             <h4>${product.name}</h4>

@@ -759,9 +759,6 @@ header nav {
 }
 
 
-
-
-
 .footer {
   background: #f8f9fa;
   padding: 4rem 0 2rem 0;
@@ -809,6 +806,7 @@ header nav {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .app-download-badges img {
@@ -820,6 +818,7 @@ header nav {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -842,35 +841,25 @@ header nav {
   transform: translateY(-2px);
 }
 
-.trusted-by-section {
-  margin: 3rem 0;
-  text-align: center;
-}
-
-.trusted-by-title {
-  font-size: 16px;
-  font-weight: 600;
+.contact-info {
+  font-size: 14px;
   color: #666;
-  margin-bottom: 1rem;
 }
 
-.trusted-logos {
+.contact-info i {
+  color: #ff8008;
+  margin-right: 0.5rem;
+}
+
+.contact-info .contact-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
 }
 
-.trusted-logos img {
-  height: 40px;
-  width: auto;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.trusted-logos img:hover {
-  opacity: 1;
+.contact-info .contact-item i {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
 }
 
 .footer-bottom {
@@ -884,45 +873,338 @@ header nav {
 .footer-bottom a {
   color: #666;
   text-decoration: none;
-  margin: 0 0.5rem;
+  margin: 0 0.25rem;
 }
 
 .footer-bottom a:hover {
   color: #ff8008;
 }
 
-.contact-info {
-  font-size: 14px;
-  color: #666;
-}
-
-.contact-info i {
-  color: #ff8008;
-  margin-right: 0.5rem;
-}
-
+/* Enhanced Mobile Responsiveness */
 @media (max-width: 768px) {
   .footer {
-    padding: 3rem 0 2rem 0;
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  .footer-logo {
+    height: 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Logo section takes full width */
+  .footer .row .col-lg-3:first-child {
+    order: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  /* First mobile row: Olopo and Product (2 columns) */
+  .footer .row .col-lg-2:nth-child(2) {
+    order: 2;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer .row .col-lg-2:nth-child(3) {
+    order: 3;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Second mobile row: Partners and Contact (2 columns) */
+  .footer .row .col-lg-2:nth-child(4) {
+    order: 4;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer .row .col-lg-3:last-child {
+    order: 5;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer-section {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  .footer-section h5 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff8008;
+    padding-bottom: 0.5rem;
+    display: inline-block;
   }
 
   .app-download-badges {
     justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .app-download-badges img {
+    height: 35px;
   }
 
   .social-icons {
     justify-content: center;
+    gap: 0.75rem;
   }
 
-  .trusted-logos {
-    gap: 1rem;
+  .social-icons a {
+    width: 36px;
+    height: 36px;
   }
 
-  .trusted-logos img {
-    height: 30px;
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info .contact-item {
+    margin-bottom: 1rem;
+    justify-content: center;
   }
 
   .footer-bottom {
     text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
   }
+
+  .footer-bottom .row>div {
+    margin-bottom: 1rem;
+  }
+
+  .footer-bottom a {
+    margin: 0 0.1rem;
+    display: inline-block;
+  }
+}
+
+/* Tablet Portrait */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 3rem 0 2rem 0;
+  }
+
+  /* Logo section takes full width on tablet */
+  .footer .row .col-lg-3:first-child {
+    order: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  /* First tablet row: Olopo and Product (2 columns) */
+  .footer .row .col-lg-2:nth-child(2) {
+    order: 2;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer .row .col-lg-2:nth-child(3) {
+    order: 3;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Second tablet row: Partners and Contact (2 columns) */
+  .footer .row .col-lg-2:nth-child(4) {
+    order: 4;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer .row .col-lg-3:last-child {
+    order: 5;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer-section {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .footer-section h5 {
+    font-size: 17px;
+    border-bottom: 2px solid #ff8008;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .app-download-badges {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .social-icons {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info .contact-item {
+    justify-content: center;
+  }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 576px) {
+  .footer {
+    padding: 1.5rem 0 1rem 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .footer-section h5 {
+    font-size: 15px;
+  }
+
+  .footer-section ul li a {
+    font-size: 13px;
+  }
+
+  .app-download-badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .app-download-badges img {
+    height: 32px;
+  }
+
+  .social-icons a {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .contact-info {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .footer-bottom .col-md-6 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-width: 896px) and (orientation: landscape) {
+  .footer {
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  .footer-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Tablet Portrait */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 3rem 0 2rem 0;
+  }
+
+  /* Logo section takes full width on tablet */
+  .footer .row .col-lg-3:first-child {
+    order: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  /* First tablet row: Olopo and Product (2 columns) */
+  .footer .row .col-lg-2:nth-child(2) {
+    order: 2;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer .row .col-lg-2:nth-child(3) {
+    order: 3;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Second tablet row: Partners and Contact (2 columns) */
+  .footer .row .col-lg-2:nth-child(4) {
+    order: 4;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer .row .col-lg-3:last-child {
+    order: 5;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer-section {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .footer-section h5 {
+    font-size: 17px;
+    border-bottom: 2px solid #ff8008;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .app-download-badges {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .social-icons {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info .contact-item {
+    justify-content: center;
+  }
+}
+
+/* Demo styles for placeholder images */
+.placeholder-img {
+  background: #ddd;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.logo-placeholder {
+  width: 120px;
+  height: 40px;
+}
+
+.app-placeholder {
+  width: 120px;
+  height: 35px;
 }
