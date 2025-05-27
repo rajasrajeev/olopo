@@ -521,7 +521,7 @@ header nav {
 .brand-card img {
   width: 100%;
   height: 18rem;
-  object-fit: cover;
+  /* object-fit: cover; */
   border-radius: 15px;
 }
 
