@@ -2,20 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Olopo Homepage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olopo Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/gallery.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/offer-card.css" />
+  <link rel="stylesheet" href="assets/css/popup-modal.css" />
 </head>
 
 <body>
-  <header>
+   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid px-4">
         <!-- Logo -->
@@ -50,68 +51,25 @@
   </header>
 
 
-    <section class="gallery-section">
-      <div class="d-flex justify-content-between">
-        <div class="">
-          <h1 class="mt-4">Gallery</h1>
+
+  <!-- <section class="brand-section mx-5">
+    <h2>Explore the Brands<br>and Offers</h2>
+    <p class="subtitle">you can access all brands and customized offers near you</p>
+  
+  </section> -->
+
+   <div class="section ">
+            <div class="section-header">
+                <h2 class="section-title">Gift Vouchers</h2>
+                <!-- <a href="gift-vouchers.html" class="view-all-btn">View All</a> -->
+            </div>
+            
+            <div class="card-grid card-grid-gift">
+            </div>
         </div>
-        <!-- <div class="coin-badge d-flex align-items-center">
-          <span>2000</span>
-          <i class="bi bi-award-fill ms-1 text-warning"></i>
-        </div> -->
-      </div>
-    
-      <!-- Gallery Grid -->
-      <div class="container py-4">
-        <div class="row g-3">
-          <!-- gallery 1 -->
-          <div class="col-md-3">
-            <div class="card gallery-card">
-              <img src="assets/images/events/first-section.png" alt="gallery 1" />
-              <div class="p-2">
-                <h6 class="mb-1">Title</h6>
-              </div>
-            </div>
-          </div>
-    
-          <!-- gallery 2 -->
-          <div class="col-md-3">
-            <div class="card gallery-card">
-              <img src="assets/images/events/first-section.png" alt="gallery 2" />
-              <div class="p-2">
-                <h6 class="mb-1">L2: Title</h6>
-              </div>
-            </div>
-          </div>
-    
-          <!-- gallery 3 -->
-          <div class="col-md-3">
-            <div class="card  gallery-card">
-              <img src="assets/images/events/first-section.png" alt="gallery 3" />
-              <div class="p-2">
-                <h6 class="mb-1">Title</h6>
-              </div>
-            </div>
-          </div>
-          <!-- galley 4 -->
-          <div class="col-md-3">
-            <div class="card  gallery-card">
-              <img src="assets/images/movie/poster2.webp" alt="gallery 4" />
-              <div class="p-2">
-                <h6 class="mb-1">TITLE</h6>
-
-              </div>
-            </div>
-          </div>
-
-      
-        </div>
-      </div>
-          
-    </section>
 
 
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <!-- Main Footer Content -->
       <div class="row">
@@ -209,10 +167,25 @@
       </div>
     </div>
   </footer>
-      <script src="assets/js/google-search.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
+  <script src="assets/js/gift.js"></script>
+  <script src="assets/js/google-search.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var popupModal = new bootstrap.Modal(document.getElementById('popupAdModal'));
+        popupModal.show();
+      });
+       // Add this JavaScript code to stop video when modal is closed
+      document.getElementById('popupAdModal').addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('modalVideo');
+        if (video) {
+          video.pause();
+          video.currentTime = 0; // Optional: rewind to beginning
+        }
+      });
+    </script>
 </body>
 
 </html>

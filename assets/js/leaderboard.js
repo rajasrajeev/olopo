@@ -20,7 +20,7 @@ const leaderboardList = document.querySelector('.leaderboard-list');
  */
 function initLeaderboard() {
     // Get base URL and token from localStorage
-    const baseUrlAdmin = "https://olopo-dev.webc.in/api";
+    const baseUrlAdmin = "https://admin.olopo.app/api";
     const token = localStorage.getItem('olopo_admin_token');
     
     if (!baseUrlAdmin || !token) {

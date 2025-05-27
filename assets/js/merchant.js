@@ -4,7 +4,7 @@
 // Configuration objects for both API endpoints
 const apiConfig = {
     admin: {
-        baseUrl: 'https://admin.olopo.app/api',
+        baseUrl: 'https://olopo-dev.webc.in/api',
         authToken: null,
         userData: null
     },
@@ -304,7 +304,7 @@ function renderProductsToPage(append = false) {
         const endIndex = append ? products.length : products.length;
         
         // Add new cards based on product data
-        for (let i = startIndex; i < 4; i++) {
+        for (let i = startIndex; i < endIndex; i++) {
             const product = products[i];
             if (product) { // Make sure product exists
                 const productCard = createProductCard(product);
