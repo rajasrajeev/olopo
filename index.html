@@ -35,8 +35,8 @@
           <!-- Navigation links - centered -->
           <div class="nav-links mx-auto">
             <a class="active" href="index.html">User</a>
-            <a href="#merchants">Merchants</a>
-            <a href="#franchisees">Franchisees</a>
+            <a href="#merchants" class="disabled" onclick="return false;">Merchants</a>
+            <a href="#franchisees" class="disabled" onclick="return false;">Franchisees</a>
           </div>
 
           <!-- Download button - right aligned -->
@@ -362,18 +362,42 @@
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
   <script>
+    // Modal Show Once Script
+    // This script ensures the modal shows only once per user using localStorage
+
     document.addEventListener('DOMContentLoaded', function () {
-      var popupModal = new bootstrap.Modal(document.getElementById('popupAdModal'));
-      popupModal.show();
+      // Check if modal has been shown before
+      const modalShown = localStorage.getItem('olopoModalShown');
+
+      // If modal hasn't been shown before, show it
+      if (!modalShown) {
+        var popupModal = new bootstrap.Modal(document.getElementById('popupAdModal'));
+        popupModal.show();
+
+        // Mark modal as shown in localStorage
+        localStorage.setItem('olopoModalShown', 'true');
+      }
     });
-    // Add this JavaScript code to stop video when modal is closed
+
+    // Stop video when modal is closed
     document.getElementById('popupAdModal').addEventListener('hidden.bs.modal', function () {
       const video = document.getElementById('modalVideo');
       if (video) {
         video.pause();
-        video.currentTime = 0; // Optional: rewind to beginning
+        video.currentTime = 0; // Rewind to beginning
       }
     });
+
+    // Optional: Function to reset modal flag (for testing purposes)
+    function resetModalFlag() {
+      localStorage.removeItem('olopoModalShown');
+      console.log('Modal flag reset. Modal will show on next page load.');
+    }
+
+    // Optional: Function to check if modal has been shown
+    function hasModalBeenShown() {
+      return localStorage.getItem('olopoModalShown') === 'true';
+    }
   </script>
 </body>
 
